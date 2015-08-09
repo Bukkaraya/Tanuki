@@ -1,4 +1,4 @@
-// Color Variables
+// Colors
 $red: #F44336;
-$light-red: lighten(#F44336, 10%);
-$dark-red: darken(#F44336, 20%);
+$light-red: lighten($red, 10%);
+$dark-red: darken($red, 10%);

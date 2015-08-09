@@ -1,1 +1,9 @@
+a, a:visited{
+    color: $red;
+    text-decoration: none;
 
+    &:hover, &:active{
+        color: darken($dark-red, 10%);
+        text-decoration: underline;
+    }
+}
