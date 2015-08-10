@@ -1,0 +1,88 @@
+.main-header{
+    width: 100%;
+    background-color: $red;
+}
+.main-nav{
+    height: 75px;
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    .logo{
+        color: white;
+        margin: 0;
+        line-height: 75px;
+        font-weight: 100;
+    }
+    .menu{
+        display: none;
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        width: 400px;
+        margin: 0;
+        li{
+            a{
+                color: white;
+                line-height: 75px;
+                text-transform: uppercase;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width: 790px){
+    .main-nav{
+        display: block;
+        height: 50px;
+        .menu-items{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            .logo{
+                line-height: 50px;
+                font-size: 1.5em;
+                text-align: center;
+            }
+            .menu{
+                display: block;
+                width: 50px;
+                height: 50px;
+                background: url('../img/menu.svg') no-repeat center center;
+                cursor: pointer;
+            }
+        }
+        ul{
+            background: $dark-red;
+            display: block;
+            width: 100%;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 500ms ease-in-out;
+            li{
+                height: 50px;
+                text-align: center;
+                border-bottom: 1px solid $red;
+                a{
+                    color: white;
+                    line-height: 50px;
+                    font-size: 1.2em;
+                    &:hover{
+                        color: lighten($light-red, 20%);
+                    }
+                }
+            }
+        }
+        .showing{
+            max-height: 20em;
+            transition: max-height 500ms ease-in-out;
+        }
+    }
+}
