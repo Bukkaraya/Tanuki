@@ -355,9 +355,8 @@ th {
 
 /* Global Styles */
 body {
-  width: 100%;
   font-size: 1em;
-  font-color: black;
+  color: black;
   font-family: "Fira Sans", Helvetica, Arial, sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -398,7 +397,18 @@ a, a:visited {
     text-decoration: underline; }
 
 .btn {
-  color: #F44336; }
+  border: none;
+  background-color: #F44336;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  text-transform: uppercase;
+  -webkit-transition: all 400ms ease-in-out;
+          transition: all 400ms ease-in-out;
+  margin: 0 auto; }
+  .btn:hover {
+    background-color: #f32c1e;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
+  .btn:focus {
+    outline: none; }
 
 .main-header {
   width: 100%;
@@ -445,7 +455,8 @@ a, a:visited {
 @media (max-width: 790px) {
   .main-nav {
     display: block;
-    height: 50px; }
+    height: 50px;
+    position: relative; }
     .main-nav .menu-items {
       display: -webkit-box;
       display: -webkit-flex;
@@ -455,7 +466,7 @@ a, a:visited {
       -webkit-justify-content: space-between;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      padding: 0 20px; }
+      padding: 0 5px; }
       .main-nav .menu-items .logo {
         line-height: 50px;
         font-size: 1.5em;
@@ -467,10 +478,11 @@ a, a:visited {
         background: url("../img/menu.svg") no-repeat center center;
         cursor: pointer; }
     .main-nav ul {
+      position: absolute;
       background: #ea1c0d;
       display: block;
       width: 100%;
-      max-height: 0;
+      max-height: 0px;
       overflow: hidden;
       -webkit-transition: max-height 500ms ease-in-out;
               transition: max-height 500ms ease-in-out; }
@@ -488,3 +500,25 @@ a, a:visited {
       max-height: 20em;
       -webkit-transition: max-height 500ms ease-in-out;
               transition: max-height 500ms ease-in-out; } }
+
+.banner {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 2rem 0; }
+  .banner h2 {
+    color: #F44336;
+    margin: 0;
+    font-weight: lighter;
+    font-size: 1.8em; }
+  .banner .slogan {
+    padding: 0 5px;
+    margin: 1.4rem 0; }
+  .banner .hero-cta-btn {
+    color: white;
+    text-align: center;
+    display: block;
+    padding: 1rem;
+    max-width: 200px; }
+    .banner .hero-cta-btn:hover {
+      text-decoration: none;
+      color: white; }

@@ -1,0 +1,26 @@
+.banner{
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 2rem 0;
+    h2{
+        color: $red;
+        margin: 0;
+        font-weight: lighter;
+        font-size: 1.8em;
+    }
+    .slogan{
+        padding: 0 5px;
+        margin: 1.4rem 0;
+    }
+    .hero-cta-btn{
+        color: white;
+        text-align: center;
+        display: block;
+        padding: 1rem;
+        max-width: 200px;
+        &:hover{
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
